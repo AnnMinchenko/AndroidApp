@@ -7,21 +7,24 @@ import android.os.Parcelable
 class Model() : Parcelable {
     var title:String=""
     var desc:String=""
+    var image:String=""
 
     constructor(parcel: Parcel) : this() {
         title = parcel.readString().toString()
         desc = parcel.readString().toString()
+        image = parcel.readString().toString()
     }
 
-    constructor(title: String, desc: String, /*image: Image*/) : this() {
+    constructor(title: String, desc: String, image: String) : this() {
         this.title = title
         this.desc = desc
-     //   this.image = image
+        this.image = image
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(title)
         parcel.writeString(desc)
+        parcel.writeString(image)
     }
 
     override fun describeContents(): Int {

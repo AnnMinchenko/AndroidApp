@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.laba3.databinding.ActivityAnimeListBinding
 import com.example.laba3.databinding.ActivityMainBinding
 import com.example.laba3.databinding.RowAnimeBinding
+import com.squareup.picasso.Picasso
 
 class AdapterAnime(private val context: Context, private val animeArrayList: ArrayList<Model>):RecyclerView.Adapter<AdapterAnime.HolderAnime>(){
 
@@ -27,6 +28,7 @@ class AdapterAnime(private val context: Context, private val animeArrayList: Arr
   //      private val binding= RowAnimeBinding
         val titleTv=animeBinding.titleTv
         val descTv=animeBinding.descTv
+        val imageView=animeBinding.imageView
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HolderAnime {
@@ -42,10 +44,11 @@ class AdapterAnime(private val context: Context, private val animeArrayList: Arr
         val model=animeArrayList[position]
         val title=model.title
         val desc=model.desc
-       // val image=model.image
+        val image=model.image
 
         holder.titleTv.text=title
         holder.descTv.text=desc
+        Picasso.get().load("$image").resize(230, 300).centerCrop().placeholder(R.drawable.no_image).into(holder.imageView)
        // holder.imageView.src=image
 
         holder.itemView.setOnClickListener {

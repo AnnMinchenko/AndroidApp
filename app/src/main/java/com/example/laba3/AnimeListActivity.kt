@@ -14,9 +14,9 @@ class AnimeListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_anime_list)
 
-        var model1 = Model("a", "a")
-        var model2 = Model("b", "b")
-        var model3 = Model("c", "c")
+        var model1 = Model("a", "a" , "https://i.etsystatic.com/24426965/r/il/a2c3f6/2528263563/il_fullxfull.2528263563_fiq4.jpg")
+        var model2 = Model("b", "b" , "https://imagesyoulike.com/images/00000/32x24/61406.jpg")
+        var model3 = Model("c", "c" , "https://imagesxfhdhyyoulike.com/images/00000/32x24/61406.jpg")
         var list=ArrayList<Model>()
         list.add(model1)
         list.add(model2)

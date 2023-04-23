@@ -13,7 +13,7 @@ class DetailedActivity : AppCompatActivity() {
         val model = intent.getParcelableExtra<Model>("model")
 
         val ft: FragmentTransaction = supportFragmentManager.beginTransaction()
-        val mFragment: DetailedFragment? = model?.let { DetailedFragment.newInstance(model.title, model.desc) }
+        val mFragment: DetailedFragment? = model?.let { DetailedFragment.newInstance(model.title, model.desc, model.image) }
         if (mFragment != null) {
             ft.replace(R.id.info_fragment, mFragment)
             ft.commit()

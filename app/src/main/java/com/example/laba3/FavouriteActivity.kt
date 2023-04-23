@@ -11,7 +11,7 @@ class FavouriteActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_favourite)
 
-        var model1 = Model("a", "a")
+        var model1 = Model("a", "a" , "https://i.pinimg.com/originals/56/bd/3d/56bd3d196b190c2dcfadaa74d01dbdf3.jpg")
         var list=ArrayList<Model>()
         list.add(model1)
 
